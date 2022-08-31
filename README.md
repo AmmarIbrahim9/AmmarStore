@@ -1,4 +1,4 @@
-# fakestore
+# GraduationProject
 
 A new Flutter project.
 
