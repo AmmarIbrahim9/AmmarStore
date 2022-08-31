@@ -1,7 +1,7 @@
 import 'package:fakestore/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
+
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('asset/Test.jpg'),
+        child: Image.asset('asset/Logo.png'),
       ),
     );
   }

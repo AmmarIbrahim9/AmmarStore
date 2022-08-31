@@ -3,7 +3,6 @@ import 'package:fakestore/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fakestore/products.dart';
-
 import 'Search.dart';
 
 main() {
@@ -34,11 +33,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.teal,
         automaticallyImplyLeading: false,
-        leading: Icon(
+        leading: const Icon(
           Icons.menu, // add custom icons also
         ),
-        title: Center(
-          child: const Text(
+        title: const Center(
+          child: Text(
             "Shopping App",
           ),
         ),
@@ -69,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(15.0),
         child: GridView.builder(
           itemCount: productList.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 3.5 / 5,
             crossAxisSpacing: 15,
@@ -101,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 Center(child: Text(item.name!)),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Align(

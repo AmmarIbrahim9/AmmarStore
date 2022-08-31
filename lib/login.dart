@@ -2,38 +2,24 @@ import 'package:fakestore/main.dart';
 import 'package:fakestore/sign_up.dart';
 import 'package:flutter/material.dart';
 
-
 class FirstScreen extends StatelessWidget {
   String? email;
 
-  //bool _isObscure = true;
+
   TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-          automaticallyImplyLeading: false
-
-        // title: const Text('First Screen'),
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'Shopping',
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 30),
-                  )),
+              Center(
+                child: Image.asset('asset/Logo.png'),
+              ),
               SizedBox(height: 20),
               TextFormField(
                 onChanged: (newValue) {
@@ -56,7 +42,7 @@ class FirstScreen extends StatelessWidget {
               const SizedBox(height: 25),
               TextFormField(
                 controller: passwordController,
-                //obscureText: _isObscure,
+                obscureText: true,
                 decoration: const InputDecoration(
                   //suffixIcon: IconButton(icon:Icon(Icons.done), onPressed: () {_isObscure==true? false: true;},),
                   labelText: 'Password',
@@ -144,5 +130,4 @@ class FirstScreen extends StatelessWidget {
   }
 }
 
-// LIFO
-// FILO
+

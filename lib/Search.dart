@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchDelegate extends SearchDelegate {
-
   List<String> searchTerms = [
     "Mac",
     "iPhone",
@@ -10,8 +9,6 @@ class CustomSearchDelegate extends SearchDelegate {
     "Lenovo Laptop",
     "Airpods",
     "Headset",
-
-
   ];
 
   @override
@@ -26,7 +23,6 @@ class CustomSearchDelegate extends SearchDelegate {
     ];
   }
 
-
   @override
   Widget? buildLeading(BuildContext context) {
     return IconButton(
@@ -36,7 +32,6 @@ class CustomSearchDelegate extends SearchDelegate {
       icon: Icon(Icons.arrow_back),
     );
   }
-
 
   @override
   Widget buildResults(BuildContext context) {

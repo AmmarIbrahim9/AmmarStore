@@ -28,7 +28,7 @@ class SecondScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Shopping',
+                    'Sign Up',
                     style: TextStyle(
                         color: Colors.teal,
                         fontWeight: FontWeight.w500,

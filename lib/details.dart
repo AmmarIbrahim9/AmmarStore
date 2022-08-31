@@ -18,8 +18,9 @@ class _detailsState extends State<details> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        automaticallyImplyLeading: false,
-        title: Center(child: const Text('More Details')),
+        title: Padding(
+            padding: EdgeInsets.fromLTRB(80.0, 2.0, 3.0, 4.0),
+            child: const Text('More Details')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -36,14 +37,23 @@ class _detailsState extends State<details> {
             return GestureDetector(
               onTap: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Description(photo: item.image!,id: item.id!,)),
+                MaterialPageRoute(
+                    builder: (context) => Description(
+                          photo: item.image!,
+                          id: item.id!,
+                          Desc: item.description!,
+                          quantity: item.quantity!,
+                        )),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Stack(
                     children: [
-                      Container(child: Hero(tag: item.id!, child: Image.network(item.image!))),
+                      Container(
+                          child: Hero(
+                              tag: item.id!,
+                              child: Image.network(item.image!))),
                       InkWell(
                         onTap: () {
                           setState(() {
@@ -62,8 +72,18 @@ class _detailsState extends State<details> {
                       ),
                     ],
                   ),
-                  Text(item.name!),
-                  Text(item.price.toString()),
+                  Text(
+                    item.name!,
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Container(
+                      width: double.infinity,
+                      color: Colors.grey.withOpacity(0.8),
+                      child: Center(
+                          child: Text(
+                        '${item.price.toString()} USD',
+                        style: TextStyle(fontSize: 18),
+                      ))),
                 ],
               ),
             );
